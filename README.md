@@ -2,7 +2,7 @@
 <div align="center">
 <img width="625" height="212" alt="Polkadot Blockchain Academy Banner Img" src="https://github.com/user-attachments/assets/8ad342ba-b189-4da9-be56-03a92dcb86b9" />
 
-<h1>✨ Module 4 Sept 9 Hackathon Entry - Smart Contracts ✨</h1>
+<h1>Module 4 Sept 9 Hackathon Entry - Smart Contracts ✨</h1>
 
 <h3>PBA Cohort 7 Bali</h3>
 <p><strong>Student: </strong> Chris Anatalio</p>
@@ -37,12 +37,55 @@
 
 # 📈 Uniswap V2 on PolkVM - Minimal Viable Dex on Polkadot Hub Smart Contract
 
+_Uniswap V2 contracts on Polkadot using PolkVM._
+
+### Quickstart
+
+_Steps for hackathon judges:_
+
+**Install dependencies**
+
+```shell
+pnpm install --strict-peer-dependencies --no-optional && pnpm update
+```
+
+**Compile contract:**
+
+```bash
+pnpx hardhat compile --typecheck
+```
+
+**Run your tests:**
+
+```bash
+pnpx hardhat test --network localNode
+```
+
+**Run local node**
+
+```terminaloutput
+pnpx hardhat node-polkadot
+```
+
+**Set deployment account**
+
+```bash
+pnpx hardhat vars set PRIVATE_KEY "INSERT_PRIVATE_KEY"
+```
+
+**Deploy using Ignition:**
+
+```bash
+
+```
+
 ----
 
 ## Uniswap V2 Solidity Smart Contracts with PolkVM on the Polkadot Network
 
-Hackathon entry dapp using Uniswap V2 contracts on Polkadot using PolkVM and @parity/hardhat-polkadot with Solidity smart
-contracts and hardhat. A decentralized exchange with PolkVM and standard tools like Hardhat and TypeScript with custom 
+Hackathon entry dapp using Uniswap V2 contracts on Polkadot using PolkVM and @parity/hardhat-polkadot with Solidity
+smart
+contracts and hardhat. A decentralized exchange with PolkVM and standard tools like Hardhat and TypeScript with custom
 hardhat-polkadot plugins.
 
 **Contracts:** `uniswap/contracts`
@@ -65,7 +108,8 @@ hardhat-polkadot plugins.
 
 ## Get Started with DevContainers on Polkadot
 
-Read the [GitHub Docs](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/setting-up-your-repository/facilitating-quick-creation-and-resumption-of-codespaces)
+Read
+the [GitHub Docs](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/setting-up-your-repository/facilitating-quick-creation-and-resumption-of-codespaces)
 
 - Option 1:
   Create [GitHub Codespace from the GitHub UI](https://docs.github.com/en/codespaces/developing-in-a-codespace/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository)
