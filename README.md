@@ -40,10 +40,14 @@
 _Uniswap V2 contracts on Polkadot using PolkVM, typechain, Hardhat, Solidity and the @parity/hardhat-polkadot plugin._
 
 ### Quickstart
+- Assumes local env setup has already been completed
+- Requires [Node.js 22](https://nodejs.org/en/)
+- Requires [pnpm](https://pnpm.io/)
+- Requires [Docker](https://www.docker.com/)
 
 _Steps for hackathon judges:_
 
-> Following commands must be executed in `/uniswap` directory
+> The following commands must be executed in `/uniswap` directory
 
 ```shell
 cd uniswap
@@ -90,16 +94,15 @@ pnpm hardhat vars set PRIVATE_KEY "0x5fb92c48bebcd6e98884f76de468fa3f6278f880713
 ```
 
 **Deploy using Ignition:**
-
-- https://github.com/pcaversaccio/createx?tab=readme-ov-file#new-deployments
+- Must fund account first
 
 ```bash
 pnpm hardhat ignition deploy ignition/modules/UniswapV2ERC20.ts --network localNode --strategy basic
 ```
-
-View previous deployment artifacts to local node:  `uniswap/ignition/deployments`
+_View previous deployment artifacts to local node:_  `uniswap/ignition/deployments`
 
 > CREATEX factory isn't deployed yet on passet hub
+- https://github.com/pcaversaccio/createx?tab=readme-ov-file#new-deployments
 
 ```bash
 pnpm hardhat ignition deploy ignition/modules/UniswapV2ERC20.ts --network localNode --strategy create2
@@ -119,6 +122,7 @@ pnpm hardhat ignition deploy ignition/modules/UniswapV2ERC20.ts --network localN
 - Pre-fund accounts on local node
 - Securely configure passet testnet account config for deployment
 - Deploy contracts to passet testnet
+- Add tests and ignition modules for other contracts
 
 ----
 
