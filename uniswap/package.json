@@ -1,0 +1,68 @@
+{
+  "name": "uniswap-dapp-pba",
+  "version": "0.2.0",
+  "scripts": {
+    "clear": "rm -rf node_modules/",
+    "tidy": "pnpm clear && pnpm prune --no-optional && pnpm store prune && pnpm update",
+    "deps": "pnpm install --strict-peer-dependencies --no-optional && pnpm update",
+    "reset": "pnpm tidy && pnpm deps",
+    "eslint:fix": "eslint './**/*.ts' --fix",
+    "hint": "pnpm hardhat check",
+    "lint": "pnpm hint && pnpm eslint:fix",
+    "wipe": "rm -rf artifacts-pvm && rm -rf cache-pvm && rm -rf typechain-types",
+    "tc": "pnpm hardhat typechain --typecheck",
+    "types": "tsc --pretty --strict",
+    "compile": "pnpm hardhat compile --typecheck",
+    "gen": "pnpm tc && pnpm types && pnpm compile",
+    "dev": "pnpm hardhat node-polkadot --typecheck --show-stack-traces",
+    "test": "pnpm hardhat test --typecheck --show-stack-traces"
+  },
+  "keywords": [
+    "hardhat-polkadot",
+    "parity",
+    "hardhat",
+    "@typechain/hardhat",
+    "hardhat-ethers"
+  ],
+  "author": "anataliocs@gmail.com",
+  "contributors": [
+    "Chris Anatalio"
+  ],
+  "license": "MIT",
+  "description": "Uniswap V2 Demo - Polkadot Hub Smart Contract Example.",
+  "repository": {
+    "url": "https://github.com/anataliocs/polkavm-hardhat-examples"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.1.0",
+    "@nomicfoundation/hardhat-ethers": "^3.1.0",
+    "@nomicfoundation/hardhat-ignition-ethers": "^0.15.14",
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "@nomiclabs/hardhat-solhint": "^4.1.0",
+    "@parity/hardhat-polkadot": "^0.1.10",
+    "@parity/hardhat-polkadot-node": "^0.1.5",
+    "@parity/hardhat-polkadot-resolc": "^0.1.8",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^4.3.20",
+    "@types/dockerode": "^3.3.42",
+    "@types/mocha": "^10.0.10",
+    "chai": "^4.5.0",
+    "dockerode": "^4.0.7",
+    "dotenv": "^17.2.1",
+    "ethers": "^6.15.0",
+    "hardhat": "^2.26.3",
+    "hardhat-gas-reporter": "^2.3.0",
+    "mocha": "^10.8.2",
+    "polkadot-api": "^1.16.1",
+    "run-container": "^2.0.12",
+    "solc": "0.8.26",
+    "source-map-support": "^0.5.21",
+    "ts-loader": "^9.5.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tslib": "^2.8.1",
+    "tsx": "^4.20.4",
+    "typescript-eslint": "^8.40.0"
+  }
+}

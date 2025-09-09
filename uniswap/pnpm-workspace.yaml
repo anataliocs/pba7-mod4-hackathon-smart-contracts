@@ -1,0 +1,13 @@
+onlyBuiltDependencies:
+  - '@datadog/native-appsec'
+  - '@datadog/native-metrics'
+  - '@datadog/pprof'
+  - '@swc/core'
+  - cpu-features
+  - dd-trace
+  - esbuild
+  - fs-xattr
+  - keccak
+  - protobufjs
+  - secp256k1
+  - ssh2

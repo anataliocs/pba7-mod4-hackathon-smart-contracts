@@ -1,0 +1,71 @@
+# Markdownlint configuration
+# Location: .github/.markdownlint.yaml
+# Purpose: Apply sensible defaults while accommodating inline HTML and project README style.
+# Reference: https://github.com/DavidAnson/markdownlint
+
+# Start from defaults, then override selectively
+# (markdownlint-cli uses default true if not specified; keeping explicit for clarity)
+default: true
+
+# Line length: keep human-friendly but not overly strict
+MD013:
+  line_length: 120
+  code_blocks: false
+  tables: false
+  headings: false
+  stern: true
+
+# Allow common inline HTML elements used in this repo's README
+MD033:
+  allowed_elements:
+    - div
+    - span
+    - img
+    - a
+    - h1
+    - h3
+    - h6
+    - br
+
+# Do not require the first line to be a heading (README uses HTML header block)
+MD041: false
+
+# Allow multiple H1s due to mixed HTML/Markdown headers in README
+MD025: false
+
+# Do not enforce the first heading level (README header is HTML-based)
+MD002: false
+
+# Limit multiple consecutive blank lines but allow some spacing for readability
+MD012:
+  maximum: 2
+
+# Unordered list indentation and marker style
+MD007:
+  indent: 2
+  start_indented: false
+MD004:
+  style: dash
+
+# Ordered list style: always '1.'
+MD029:
+  style: one
+
+# Code blocks should be fenced, and separated by blank lines where appropriate
+MD046:
+  style: fenced
+MD031: true
+
+# Heading punctuation (avoid noisy errors on common punctuation)
+MD026:
+  punctuation: ".,;:!?"
+
+# Consistent horizontal rule style
+MD035:
+  style: "---"
+
+# Only flag duplicate headings within the same section level
+MD024:
+  siblings_only: true
+
+# Other rules keep defaults (true) unless adjusted above.

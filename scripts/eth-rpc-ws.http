@@ -1,0 +1,12 @@
+### WEBSOCKET request to example server
+WEBSOCKET ws://localhost:8545
+Content-Type: application/json
+
+{
+  "jsonrpc": "2.0",
+  "method": "eth_chainId",
+  "params": [],
+  "id": 1
+}
+
+###

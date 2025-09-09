@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="compile" type="js.build_tools.npm">
+    <package-json value="$PROJECT_DIR$/uniswap/package.json" />
+    <command value="run" />
+    <scripts>
+      <script value="compile" />
+    </scripts>
+    <node-interpreter value="project" />
+    <package-manager value="pnpm" />
+    <envs />
+    <method v="2">
+      <option name="TypeScript.Before.Run" enabled="true" FAIL_ON_ERROR="true" CONFIG_PATH="$PROJECT_DIR$/uniswap/tsconfig.json" />
+    </method>
+  </configuration>
+</component>

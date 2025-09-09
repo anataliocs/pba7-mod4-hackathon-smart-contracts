@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="1 Tests" type="NodeJsTestRunner" editBeforeRun="true" focusToolWindowBeforeRun="true">
+    <node-interpreter value="project" />
+    <working-dir value="$PROJECT_DIR$/uniswap" />
+    <language value="TYPE_SCRIPT" />
+    <typescript-loader value="TSX" />
+    <envs />
+    <scope-kind value="TEST_FILE" />
+    <test-file value="$PROJECT_DIR$/uniswap/test/UniswapV2ERC20.ts" />
+    <method v="2" />
+  </configuration>
+</component>

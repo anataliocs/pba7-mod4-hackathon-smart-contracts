@@ -1,0 +1,10 @@
+# Ignore dependencies and build artifacts for Solhint
+# Docs: https://protofire.github.io/solhint/#configuration
+
+# Node dependencies
+node_modules
+**/node_modules
+
+# PolkaVM/Hardhat artifacts
+artifacts-pvm
+**/artifacts-pvm

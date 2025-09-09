@@ -1,0 +1,57 @@
+# ------------------------------
+# OS / Editor files
+# ------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+
+# ------------------------------
+# Environment files
+# ------------------------------
+**/.env
+**/.env.*
+
+# ------------------------------
+# Node / TypeScript
+# ------------------------------
+node_modules/
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+# Project uses pnpm, ignore npm lockfile
+package-lock.json
+
+# ------------------------------
+# Hardhat / Build artifacts
+# ------------------------------
+# Generic artifacts & caches for all packages (including subfolders like uniswap/)
+**/artifacts/
+**/cache/
+typechain/
+typechain-types/
+
+# PolkaVM-specific
+artifacts-pvm/
+cache-pvm/
+
+# Hardhat Ignition deployments
+ignition/deployments/
+
+# ------------------------------
+# Project-specific
+# ------------------------------
+.substrate-server
+westend_runtime-*.compact.compressed.wasm
+
+# ------------------------------
+# Uniswap subproject specifics (explicit, though covered by generic patterns)
+# ------------------------------
+uniswap/artifacts/
+uniswap/cache/
+uniswap/cache/compile-cache.json

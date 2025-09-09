@@ -1,0 +1,5 @@
+# This CODEOWNERS file assigns default code ownership.
+# Learn more: https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global rule — all files in the repository
+* @anataliocs

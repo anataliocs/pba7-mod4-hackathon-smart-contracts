@@ -1,0 +1,72 @@
+# Reduce Docker build context for devcontainer
+# Version: 2025-08-19
+
+# --- VCS & CI metadata ---
+.git
+.gitignore
+.github/
+
+# --- Editors/IDE ---
+.vscode/
+.idea/
+
+# --- OS cruft ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# --- Environment & secrets (do not send to build context) ---
+.env
+.env.*
+uniswap/.env
+
+# --- Package manager caches & logs ---
+node_modules
+**/node_modules
+.pnpm-store
+**/.pnpm-store
+.npm
+.cache
+.tmp
+.temp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Build outputs / artifacts ---
+dist
+build
+lib
+out
+coverage
+.nyc_output
+
+# Hardhat / TypeChain artifacts
+artifacts
+cache
+typechain-types
+artifacts-pvm
+cache-pvm
+
+# Project-specific (subfolder) artifacts
+uniswap/artifacts
+uniswap/cache
+uniswap/typechain-types
+uniswap/artifacts-pvm
+uniswap/cache-pvm
+
+# --- Docs & local-only assets (not needed to build devcontainer image) ---
+docs/
+
+# --- Local HTTP client scratch files ---
+*.http
+*.rest
+.idea/http-client.env.json
+scripts/substrate-node.http
+scripts/eth-rpc-ws.http
+
+# --- Docker/Compose dev files (not needed inside build context) ---
+Dockerfile.dev
+docker-compose*.yml

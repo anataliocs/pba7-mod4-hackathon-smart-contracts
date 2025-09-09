@@ -1,0 +1,42 @@
+name: "CodeQL Config"
+
+# Disable the default CodeQL suite to use custom queries if needed
+disable-default-queries: false
+
+# Specify which languages to analyze
+# CodeQL supports: cpp, csharp, go, java, javascript, python, ruby, swift
+# For this repository, we focus on JavaScript/TypeScript since Solidity isn't directly supported
+languages:
+  - javascript
+
+# Specify paths to include/exclude
+paths:
+  # Include main source directories
+  - "uniswap/scripts"
+  - "uniswap/test"
+  - "uniswap/hardhat.config.ts"
+  - "scripts"
+  - "*.ts"
+
+paths-ignore:
+  # Exclude build artifacts, dependencies, and generated files
+  - "node_modules"
+  - "uniswap/node_modules"
+  - "uniswap/artifacts"
+  - "uniswap/artifacts-pvm"
+  - "uniswap/cache"
+  - "uniswap/cache-pvm"
+  - "uniswap/typechain-types"
+  - "**/dist/**"
+  - "**/build/**"
+  - "**/*.d.ts"
+  - "uniswap/package-lock.json"
+  - "uniswap/pnpm-lock.yaml"
+
+# Query filters to exclude certain queries if needed
+query-filters:
+  # Exclude common false positives or low-priority findings for this project type
+  - exclude:
+      id: js/unused-local-variable
+  - exclude:
+      id: js/debugger-statement

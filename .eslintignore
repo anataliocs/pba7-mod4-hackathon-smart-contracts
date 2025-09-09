@@ -1,0 +1,3 @@
+# Ignore Node.js dependencies for ESLint
+node_modules
+**/node_modules

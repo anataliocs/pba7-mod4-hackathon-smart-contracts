@@ -1,0 +1,11 @@
+import "@parity/hardhat-polkadot";
+import "@nomicfoundation/hardhat-toolbox";
+import '@nomicfoundation/hardhat-ignition-ethers';
+import '@typechain/hardhat';
+import '@nomicfoundation/hardhat-ethers';
+import '@nomicfoundation/hardhat-chai-matchers';
+import '@nomiclabs/hardhat-solhint';
+import 'chai';
+import { HardhatUserConfig } from "hardhat/config.js";
+declare const config: HardhatUserConfig;
+export default config;

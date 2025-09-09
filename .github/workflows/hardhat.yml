@@ -1,0 +1,44 @@
+name: Hardhat
+
+permissions:
+  contents: read
+
+on:
+  pull_request:
+    branches: [ "**" ]
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: uniswap
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+          cache-dependency-path: uniswap/pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Compile with Hardhat
+        run: pnpm hardhat compile
+
+      - name: Run Hardhat tests
+        run: pnpm hardhat test
+        continue-on-error: true
+
+      - name: Hardhat check (typecheck and lint)
+        run: pnpm hint
+        continue-on-error: true
