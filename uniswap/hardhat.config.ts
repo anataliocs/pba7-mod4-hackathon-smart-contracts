@@ -8,14 +8,43 @@ import '@nomicfoundation/hardhat-chai-matchers'
 import '@nomiclabs/hardhat-solhint'
 import 'chai'
 import {HardhatUserConfig} from "hardhat/config";
+import { randomBytes, createHash } from "crypto";
 
 // Ensure PAPI treats "pending" as "latest" to avoid UnknownBlock on eth_getTransactionCount
 process.env.PAPI_ETH_PENDING_IS_LATEST = process.env.PAPI_ETH_PENDING_IS_LATEST ?? "1";
 
+// Generate or normalize a good 32-byte CREATE2 salt
+function normalizeSalt(input: string): string {
+    // Accept hex (with/without 0x) or arbitrary string to be hashed
+    let stripped = input.startsWith("0x") ? input.slice(2) : input;
+    const hexRegex = /^[0-9a-fA-F]+$/;
+    if (!hexRegex.test(stripped) || stripped.length !== 64) {
+        // Hash arbitrary input to 32 bytes
+        stripped = createHash("sha256").update(input).digest("hex");
+        // Ensure exactly 32 bytes (64 hex chars)
+        if (stripped.length < 64) {
+            stripped = stripped.padStart(64, "0");
+        } else if (stripped.length > 64) {
+            stripped = stripped.slice(0, 64);
+        }
+    }
+    return "0x" + stripped.toLowerCase();
+}
+
+const create2Salt: string = normalizeSalt(
+    process.env.IGNITION_CREATE2_SALT ||
+    process.env.CREATE2_SALT ||
+    randomBytes(32).toString("hex")
+);
+
 const config: HardhatUserConfig = {
     ignition: {
-
-        strategyConfig: {}
+        maxFeeBumps: 5,
+        strategyConfig: {
+            create2: {
+                salt: create2Salt,
+            }
+        }
     },
     solidity: '0.8.26',
     resolc: {

@@ -92,7 +92,7 @@ pnpm hardhat vars set PRIVATE_KEY "0x5fb92c48bebcd6e98884f76de468fa3f6278f880713
 **Deploy using Ignition:**
 
 ```bash
-
+pnpm hardhat ignition deploy ignition/modules/UniswapV2ERC20.ts --network localNode --strategy create2
 ```
 
 ```terminaloutput

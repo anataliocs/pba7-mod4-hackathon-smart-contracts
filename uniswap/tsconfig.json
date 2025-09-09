@@ -25,6 +25,7 @@
   "include": [
     "./scripts/*.ts",
     "test/*.ts",
+    "ignition/modules/*.ts",
     "typechain-types/*.ts",
     "typechain-types/**/*.ts"
   ],
