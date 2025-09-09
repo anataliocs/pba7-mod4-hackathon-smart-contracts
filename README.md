@@ -1,26 +1,11 @@
 <!--suppress HtmlDeprecatedAttribute -->
 <div align="center">
-<img width="1250" height="425" alt="Polkadot Blockchain Academy Banner Img" src="https://github.com/user-attachments/assets/8ad342ba-b189-4da9-be56-03a92dcb86b9" />
+<img width="625" height="212" alt="Polkadot Blockchain Academy Banner Img" src="https://github.com/user-attachments/assets/8ad342ba-b189-4da9-be56-03a92dcb86b9" />
 
-<h1>✨ dApp Track Starter Project ✨</h1>
+<h1>✨ Module 4 Sept 9 Hackathon Entry - Smart Contracts ✨</h1>
 
-<h3>PBA Cohort 7 Bali </h3>
+<h3>PBA Cohort 7 Bali</h3>
 <p><strong>Student: </strong> Chris Anatalio</p>
-
-<p align="center">
-  <span style="margin: 0 5px;">
-    <a href="https://www.linkedin.com/in/anataliocs/">
-      <img src="https://raw.githubusercontent.com/anataliocs/ColoredBadges/refs/heads/master/svg/social/linkedin.svg" alt="linkedin chris anatalio"/>
-    </a>
-  </span>
-
-  <span style="margin: 0 5px;">
-    <a href="https://x.com/CAnatalio">
-      <img src="https://raw.githubusercontent.com/anataliocs/ColoredBadges/refs/heads/master/svg/social/twitter.svg" alt="twitter chris anatalio"/>
-    </a>
-  </span>
-</p>
-<h6 align="center">Ex ConsenSys, Ex Stellar Development Foundation, Author LinkedIn Learning/Pluralsight</h6>
 
 <br/>
 
@@ -50,27 +35,22 @@
 
 </div>
 
-# 📈 Uniswap V2 Demo—Polkadot Hub Smart Contract
-
-Solidity Smart Contracts now on
-✨ [Polkadot Network](https://papermoonio.github.io/polkadot-mkdocs/develop/smart-contracts/)
-
-💻 [Create your own contract](https://docs.polkadot.com/tutorials/smart-contracts/launch-your-first-project/create-contracts/)
+# 📈 Uniswap V2 on PolkVM - Minimal Viable Dex on Polkadot Hub Smart Contract
 
 ----
 
 ## Uniswap V2 Solidity Smart Contracts with PolkVM on the Polkadot Network
 
-Demo dapp showcasing Uniswap V2 on Polkadot using PolkVM and @parity/hardhat-polkadot with Solidity smart
-contracts and hardhat. Leverage the power of the Polkadot ecosystem to build a decentralized exchange with PolkVM and
-standard tools like Hardhat and TypeScript with custom hardhat-polkadot plugins.
+Hackathon entry dapp using Uniswap V2 contracts on Polkadot using PolkVM and @parity/hardhat-polkadot with Solidity smart
+contracts and hardhat. A decentralized exchange with PolkVM and standard tools like Hardhat and TypeScript with custom 
+hardhat-polkadot plugins.
 
 **Contracts:** `uniswap/contracts`
 
-**First Step:** Choose Devcontainers or Local Setup
+**First Step:** Choose DevContainers or Local Setup
 
 <div align="center"> 
-<h3> 💖💖💖 POLKVM === TRUE 💖💖💖 </h3>
+<h3> 💖💖💖 POLKVM 💖💖💖 </h3>
 
   <span style="margin: 0 5px;">
     <a href="https://wiki.polkadot.com/">
@@ -83,10 +63,9 @@ standard tools like Hardhat and TypeScript with custom hardhat-polkadot plugins.
 
 ----
 
-## Get Started with Devcontainers for Polkadot
+## Get Started with DevContainers on Polkadot
 
-Read
-the [GitHub Docs](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/setting-up-your-repository/facilitating-quick-creation-and-resumption-of-codespaces)
+Read the [GitHub Docs](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/setting-up-your-repository/facilitating-quick-creation-and-resumption-of-codespaces)
 
 - Option 1:
   Create [GitHub Codespace from the GitHub UI](https://docs.github.com/en/codespaces/developing-in-a-codespace/creating-a-codespace-for-a-repository#creating-a-codespace-for-a-repository)
@@ -106,7 +85,7 @@ the [GitHub Docs](https://docs.github.com/en/codespaces/setting-up-your-project-
 
 ## Local Environment Setup
 
-Guide built for macOS
+Guide built for **macOS**
 
 ### Setup Polkadot SDK Dependencies
 
