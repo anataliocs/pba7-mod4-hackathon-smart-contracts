@@ -97,7 +97,10 @@ pnpm hardhat vars set PRIVATE_KEY "0x5fb92c48bebcd6e98884f76de468fa3f6278f880713
 pnpm hardhat ignition deploy ignition/modules/UniswapV2ERC20.ts --network localNode --strategy basic
 ```
 
+View previous deployment artifacts to local node:  `uniswap/ignition/deployments`
+
 > CREATEX factory isn't deployed yet on passet hub
+
 ```bash
 pnpm hardhat ignition deploy ignition/modules/UniswapV2ERC20.ts --network localNode --strategy create2
 ```
@@ -110,6 +113,12 @@ pnpm hardhat ignition deploy ignition/modules/UniswapV2ERC20.ts --network localN
 - Block Explorer URL: https://blockscout-passet-hub.parity-testnet.parity.io/
 
 [**Testnet Faucet**](https://faucet.polkadot.io/?parachain=1111)
+
+**TODO**
+
+- Pre-fund accounts on local node
+- Securely configure passet testnet account config for deployment
+- Deploy contracts to passet testnet
 
 ----
 
