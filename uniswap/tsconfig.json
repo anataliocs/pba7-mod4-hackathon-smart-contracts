@@ -2,11 +2,11 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "target": "ES2022",
-    "module": "Node16",
+    "module": "ES2022",
     "strict": true,
     "esModuleInterop": true,
     "allowJs": true,
-    "moduleResolution": "node16",
+    "moduleResolution": "bundler",
     "declaration": true,
     "composite": true,
     "noFallthroughCasesInSwitch": true,
@@ -14,17 +14,19 @@
     "allowSyntheticDefaultImports": true,
     "useUnknownInCatchVariables": true,
     "typeRoots": [
-      "./node_modules/@typechain",
-      "./node_modules/@types"
+      "node_modules/@typechain",
+      "node_modules/@types"
     ]
+  },
+  "buildOptions": {
   },
   "include": [
     "./scripts/*.ts",
-    "./test/*.ts",
-    "./typechain-types/*.ts",
-    "./typechain-types/**/*.ts"
+    "test/*.ts",
+    "typechain-types/*.ts",
+    "typechain-types/**/*.ts"
   ],
   "files": [
-    "./hardhat.config.ts"
+    "hardhat.config.ts"
   ]
 }

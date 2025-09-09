@@ -43,34 +43,48 @@ _Uniswap V2 contracts on Polkadot using PolkVM._
 
 _Steps for hackathon judges:_
 
+> Following commands must be executed in `/uniswap` directory
+
+```shell
+cd uniswap
+```
+
 **Install dependencies**
 
 ```shell
-pnpm install --strict-peer-dependencies --no-optional && pnpm update
+pnpm deps
+```
+Reset and reinstall using `pnpm reset`
+
+**Generate typechain definitions:**
+
+```bash
+pnpm gen
 ```
 
 **Compile contract:**
 
 ```bash
-pnpx hardhat compile --typecheck
+pnpm hardhat compile --typecheck
+```
+
+**Run local node**
+> Docker daemon must be running
+
+```terminaloutput
+pnpm hardhat node-polkadot
 ```
 
 **Run your tests:**
 
 ```bash
-pnpx hardhat test --network localNode
-```
-
-**Run local node**
-
-```terminaloutput
-pnpx hardhat node-polkadot
+pnpm test
 ```
 
 **Set deployment account**
-
+_Local node account_
 ```bash
-pnpx hardhat vars set PRIVATE_KEY "INSERT_PRIVATE_KEY"
+pnpm hardhat vars set PRIVATE_KEY "0x5fb92c48bebcd6e98884f76de468fa3f6278f880713595d45af5b0000a702133"
 ```
 
 **Deploy using Ignition:**
@@ -200,7 +214,7 @@ brew install cmake
 - Start up eth adapter
 
 ```terminaloutput
-pnpx hardhat node
+pnpm hardhat node
 ```
 
 **Error Output:**
@@ -223,14 +237,14 @@ ErrorEvent {
 **Fork live Testnet**
 
 ```terminaloutput
-pnpx hardhat node --fork https://testnet-passet-hub.polkadot.io
+pnpm hardhat node --fork https://testnet-passet-hub.polkadot.io
 \ --adapter-binary-path /Users/chrisanatalio/IdeaProjects/polkavm-hardhat-examples/uniswap/bin/eth-rpc
 ```
 
 **Or use the plugin native way to spin up a node**
 
 ```terminaloutput
-pnpx hardhat node-polkadot
+pnpm hardhat node-polkadot
 ```
 
 **Download Polkadot SDK GitHub Release binary**
@@ -307,13 +321,13 @@ pnpm install --strict-peer-dependencies --no-optional && pnpm update
 **Compile your contract(With type checking):**
 
 ```bash
-pnpx hardhat compile --typecheck
+pnpm hardhat compile --typecheck
 ```
 
 **Run your tests:**
 
 ```bash
-pnpx hardhat test --network localNode
+pnpm hardhat test --network localNode
 ```
 
 **Verify:**
@@ -335,7 +349,7 @@ pnpx hardhat test --network localNode
 - Faucet:  https://faucet.polkadot.io/?parachain=1111
 
 ```bash
-pnpx hardhat vars set PRIVATE_KEY "INSERT_PRIVATE_KEY"
+pnpm hardhat vars set PRIVATE_KEY "INSERT_PRIVATE_KEY"
 ```
 
 **Deploy using Ignition Modules:**

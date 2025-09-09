@@ -1,13 +1,11 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-require("@parity/hardhat-polkadot");
-require("@nomicfoundation/hardhat-toolbox");
-require("@nomicfoundation/hardhat-ignition-ethers");
-require("@typechain/hardhat");
-require("@nomicfoundation/hardhat-ethers");
-require("@nomicfoundation/hardhat-chai-matchers");
-require("@nomiclabs/hardhat-solhint");
-require("chai");
+import "@parity/hardhat-polkadot";
+import "@nomicfoundation/hardhat-toolbox";
+import '@nomicfoundation/hardhat-ignition-ethers';
+import '@typechain/hardhat';
+import '@nomicfoundation/hardhat-ethers';
+import '@nomicfoundation/hardhat-chai-matchers';
+import '@nomiclabs/hardhat-solhint';
+import 'chai';
 // Ensure PAPI treats "pending" as "latest" to avoid UnknownBlock on eth_getTransactionCount
 process.env.PAPI_ETH_PENDING_IS_LATEST = process.env.PAPI_ETH_PENDING_IS_LATEST ?? "1";
 const config = {
@@ -69,4 +67,4 @@ const config = {
         enabled: false,
     },
 };
-exports.default = config;
+export default config;
