@@ -71,6 +71,7 @@ const config: HardhatUserConfig = {
             loggingEnabled: true,
             throwOnCallFailures: true,
             throwOnTransactionFailures: true,
+            gasPrice: 0
         },
         /** Polkadot Hub Testnet
          * faucet: https://faucet.polkadot.io/?parachain=1111

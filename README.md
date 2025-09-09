@@ -1,6 +1,6 @@
 <!--suppress HtmlDeprecatedAttribute -->
 <div align="center">
-<img width="625" height="212" alt="Polkadot Blockchain Academy Banner Img" src="https://github.com/user-attachments/assets/8ad342ba-b189-4da9-be56-03a92dcb86b9" />
+<img width="312" height="106" alt="Polkadot Blockchain Academy Banner Img" src="https://github.com/user-attachments/assets/8ad342ba-b189-4da9-be56-03a92dcb86b9" />
 
 <h1>Module 4 Sept 9 Hackathon Entry—Smart Contracts ✨</h1>
 
@@ -91,17 +91,23 @@ pnpm hardhat vars set PRIVATE_KEY "0x5fb92c48bebcd6e98884f76de468fa3f6278f880713
 
 **Deploy using Ignition:**
 
+- https://github.com/pcaversaccio/createx?tab=readme-ov-file#new-deployments
+
+```bash
+pnpm hardhat ignition deploy ignition/modules/UniswapV2ERC20.ts --network localNode --strategy basic
+```
+
+> CREATEX factory isn't deployed yet on passet hub
 ```bash
 pnpm hardhat ignition deploy ignition/modules/UniswapV2ERC20.ts --network localNode --strategy create2
 ```
 
-```terminaloutput
-Testnet details:
-* Network name: Passet Hub
-* Chain ID: 420420421
-* RPC URL: https://testnet-passet-hub-eth-rpc.polkadot.io
-* Block Explorer URL: https://blockscout-passet-hub.parity-testnet.parity.io/
-```
+**Testnet details:**
+
+- Network name: Passet Hub
+- Chain ID: 420420421
+- RPC URL: https://testnet-passet-hub-eth-rpc.polkadot.io
+- Block Explorer URL: https://blockscout-passet-hub.parity-testnet.parity.io/
 
 [**Testnet Faucet**](https://faucet.polkadot.io/?parachain=1111)
 
@@ -274,7 +280,6 @@ curl --proto '=https' --tlsv1.2 -sSfLO \
 //TODO pull keys
 from https://github.com/paritytech/hardhat-polkadot/blob/main/packages/hardhat-polkadot-node/src/constants.ts#L22
 
-
 ----
 
 <div align="center"> 
@@ -360,8 +365,10 @@ pnpm hardhat vars set PRIVATE_KEY "INSERT_PRIVATE_KEY"
 
 **Deploy using Ignition Modules:**
 
+- https://github.com/pcaversaccio/createx?tab=readme-ov-file#new-deployments
+
 ```bash
-pnpm hardhat ignition deploy ignition/modules/UniswapV2ERC20.ts --network localNode --strategy create2
+pnpm hardhat ignition deploy ignition/modules/UniswapV2ERC20.ts --network localNode --strategy basic
 ```
 
 ----
@@ -392,7 +399,7 @@ We have included `packages` in our include statement in `tsconfig.json`
 
 Now let's invoke the deployed contract.
 
-- The hash of the deployed contract and our default account 
+- The hash of the deployed contract and our default account
 - Which will invoke the `mint()` function passing in the Owner public key as the recipient
 
 **Execute this command:**
