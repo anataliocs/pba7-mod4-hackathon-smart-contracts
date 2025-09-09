@@ -37,7 +37,7 @@
 
 # 📈 Uniswap V2 on PolkVM - Minimal Viable Dex on Polkadot Hub Smart Contract
 
-_Uniswap V2 contracts on Polkadot using PolkVM, typechain, Hardhat, Solidity and the @parity/hardhat-polkadot._
+_Uniswap V2 contracts on Polkadot using PolkVM, typechain, Hardhat, Solidity and the @parity/hardhat-polkadot plugin._
 
 ### Quickstart
 
@@ -278,7 +278,7 @@ from https://github.com/paritytech/hardhat-polkadot/blob/main/packages/hardhat-p
 ----
 
 <div align="center"> 
-<img width="200" height="200" alt="148661419-419ad5b3-1b9f-480a-b723-3f292616730c" src="https://github.com/user-attachments/assets/bbe3fe0a-5568-4b8d-b880-8bdfa7b0d030" />
+<img width="100" height="100" alt="148661419-419ad5b3-1b9f-480a-b723-3f292616730c" src="https://github.com/user-attachments/assets/bbe3fe0a-5568-4b8d-b880-8bdfa7b0d030" />
 <br>
 <h4>Section 2—Hardhat and Solidity</h4>
 </div>
@@ -342,12 +342,6 @@ pnpm hardhat compile --typecheck
 pnpm hardhat test --network localNode
 ```
 
-**Verify:**
-
-```shell
-
-```
-
 **Next Step:** Deploy Contract
 
 ----
@@ -367,16 +361,14 @@ pnpm hardhat vars set PRIVATE_KEY "INSERT_PRIVATE_KEY"
 **Deploy using Ignition Modules:**
 
 ```bash
-
+pnpm hardhat ignition deploy ignition/modules/UniswapV2ERC20.ts --network localNode --strategy create2
 ```
 
 ----
 
 ## STEP 4: Interact with Deployed Contracts
 
-- Use the and from `.env`
-- Sets the output package to
-- Sets Deployed contract address to
+- Use these scripts and the `.env` params to interact with your deployed contract
 
 We have included `packages` in our include statement in `tsconfig.json`
 
@@ -388,15 +380,11 @@ We have included `packages` in our include statement in `tsconfig.json`
 
 ```
 
-**Verify your Deployed Contract:**
+**View your Deployed Contract:**
 
 ```bash
 
 ```
-
-**Review**
-
-- Your `.env` file with everything you need to build a dapp around your Contract
 
 ----
 
@@ -404,7 +392,7 @@ We have included `packages` in our include statement in `tsconfig.json`
 
 Now let's invoke the deployed contract.
 
-- The id of the deployed contract, our default source account and the public key are stored in our `.env` file
+- The hash of the deployed contract and our default account 
 - Which will invoke the `mint()` function passing in the Owner public key as the recipient
 
 **Execute this command:**
@@ -434,7 +422,7 @@ Execute:
 ----
 
 <div align="center"> 
-<img width="200" height="200" alt="148661419-419ad5b3-1b9f-480a-b723-3f292616730c" src="https://github.com/user-attachments/assets/bbe3fe0a-5568-4b8d-b880-8bdfa7b0d030" />
+<img width="100" height="100" alt="148661419-419ad5b3-1b9f-480a-b723-3f292616730c" src="https://github.com/user-attachments/assets/bbe3fe0a-5568-4b8d-b880-8bdfa7b0d030" />
 <br>
 <h4>Section 3--Javascript Clients and APIs</h4>
 </div>
@@ -499,7 +487,7 @@ pnpm start:dev
 
 **Backend SSE Example**
 
-- This example uses RxJS to generate a stream of MessageEvents pushed to a front-end client
+- This example uses RxJS to generate a stream of events pushed to a front-end client
 - Example stream
   URL:
 
@@ -522,7 +510,7 @@ pnpm start:dev
 
 ### Workflow
 
-Update the contract to make it truly yours.
+Update the contract.
 
 1. Update the contract
 2. Re-build the contract
@@ -531,7 +519,7 @@ Update the contract to make it truly yours.
 
 #### Updating the Contract
 
-Open up the contract `uniswap/contracts/src/contract.`
+Open up the contract `uniswap/contracts.`
 Modify
 
 **Execute this command:**
@@ -547,7 +535,6 @@ test suite + static analysis with app generation test. 218 GitHub stars.
 
 - https://nextjs-boilerplate-hadrysm.vercel.app/
 - https://github.com/hadrysm/nextjs-boilerplate
-
 - Generates Next.js boilerplate basic UI
 
 ----
@@ -561,7 +548,7 @@ Related
 
 //TODO Organize
 
-Chainspec: https://raw.githubusercontent.com/paritytech/chainspecs/refs/heads/main/westend/parachain/asset-hub-next/chainspec.json
+ChainSpec: https://raw.githubusercontent.com/paritytech/chainspecs/refs/heads/main/westend/parachain/asset-hub-next/chainspec.json
 
 - https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/revive/rpc/examples/westend_local_network.toml
 - https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/revive/rpc/examples
@@ -577,14 +564,14 @@ Chainspec: https://raw.githubusercontent.com/paritytech/chainspecs/refs/heads/ma
 
 ## 👀 Want to learn more?
 
-Feel free to check [the documentation](https://wiki.polkadot.com/general/polkadotjs/) or jump into
+Check [the documentation](https://wiki.polkadot.com/general/polkadotjs/) or jump into
 the [Discord server](https://polkadot-discord.w3f.tools/).
 
 ---
 
 <div align="center"> 
-<img width="300" height="300" alt="148661419-419ad5b3-1b9f-480a-b723-3f292616730c" src="https://github.com/user-attachments/assets/bbe3fe0a-5568-4b8d-b880-8bdfa7b0d030" />
-<h4><i>Built with love 💗in the Polkadot Ecosystem</i></h4>
+<img width="200" height="200" alt="148661419-419ad5b3-1b9f-480a-b723-3f292616730c" src="https://github.com/user-attachments/assets/bbe3fe0a-5568-4b8d-b880-8bdfa7b0d030" />
+<h4><i>Built with love 💗 in the Polkadot Ecosystem</i></h4>
 </div>
 
 
