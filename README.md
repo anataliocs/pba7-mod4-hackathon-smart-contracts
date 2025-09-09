@@ -248,8 +248,41 @@ brew install cmake
 pnpm hardhat node
 ```
 
-**Error Output:**
+**Fork live Testnet**
 
+```terminaloutput
+pnpm hardhat node --fork https://testnet-passet-hub.polkadot.io
+\ --adapter-binary-path /Users/chrisanatalio/IdeaProjects/polkavm-hardhat-examples/uniswap/bin/eth-rpc
+```
+
+**Or use the plugin native way to spin up a node**
+
+```terminaloutput
+pnpm hardhat node-polkadot
+```
+
+**Success Output:**
+_Example successful startup output_
+```terminaloutput
+Starting the Eth RPC Adapter at 127.0.0.1:8545
+2025-09-09 08:52:43 Substrate Node    
+2025-09-09 08:52:43 ✌️  version 3.0.0-dev-617e39ab1f1    
+2025-09-09 08:52:43 ❤️  by Parity Technologies <admin@parity.io>, 2017-2025    
+2025-09-09 08:52:43 📋 Chain specification: Development    
+2025-09-09 08:52:43 🏷  Node name: somber-jewel-8266    
+2025-09-09 08:52:43 👤 Role: AUTHORITY    
+2025-09-09 08:52:43 💾 Database: RocksDb at /tmp/substrateD5SAtX/chains/dev/db/full    
+2025-09-09 08:52:59 🔨 Initializing Genesis block/state (state: 0x15a7…f4bf, header-hash: 0xd017…6460)    
+2025-09-09 08:53:00 Creating transaction pool txpool_type=ForkAware ready=Limit { count: 8192, total_bytes: 20971520 } future=Limit { count: 819, total_bytes: 2097152 }
+2025-09-09 08:53:00 👴 Loading GRANDPA authority set from genesis on what appears to be first startup.    
+2025-09-09 08:53:00 👶 Creating empty BABE epoch changes on what appears to be first startup.    
+2025-09-09 08:53:00 Using default protocol ID "sup" because none is configured in the chain specs    
+2025-09-09 08:53:00 Local node identity is: 12D3KooWJw4vQZpPusNKvnk4qdGU7wWYhvaGcZL2QDLU2cLGmz6U    
+2025-09-09 08:53:00 Running litep2p network backend   
+```
+
+**Error Output:**
+_Example error output_
 ```terminaloutput
 starting server ...
 
@@ -265,21 +298,11 @@ ErrorEvent {
 }
 ```
 
-**Fork live Testnet**
-
-```terminaloutput
-pnpm hardhat node --fork https://testnet-passet-hub.polkadot.io
-\ --adapter-binary-path /Users/chrisanatalio/IdeaProjects/polkavm-hardhat-examples/uniswap/bin/eth-rpc
-```
-
-**Or use the plugin native way to spin up a node**
-
-```terminaloutput
-pnpm hardhat node-polkadot
-```
+----
 
 **Download Polkadot SDK GitHub Release binary**
 
+- **Experimental** approach for tinkering with wasm runtime executables
 - Westend Testnet Relay Chain Runtime
 - Saves wasm as filename: `westend_runtime-v1019002.compact.compressed.wasm`
 - Prints filename to console and adds to your .env file as `SUBSTRATE_SERVER_FILE_NAME`
@@ -303,7 +326,7 @@ from https://github.com/paritytech/hardhat-polkadot/blob/main/packages/hardhat-p
 
 ----
 
-Verify your workspace is configured correctly:
+**Verify your workspace is configured correctly:**
 
 ```bash
 rustc --version && cargo version && nvm current
@@ -388,22 +411,18 @@ pnpm hardhat ignition deploy ignition/modules/UniswapV2ERC20.ts --network localN
 
 ## STEP 4: Interact with Deployed Contracts
 
+**TODO**
+
 - Use these scripts and the `.env` params to interact with your deployed contract
 
-We have included `packages` in our include statement in `tsconfig.json`
-
-```json
-
-```
-
 ```bash
-
+TODO
 ```
 
 **View your Deployed Contract:**
 
 ```bash
-
+TODO
 ```
 
 ----
@@ -418,7 +437,7 @@ Now let's invoke the deployed contract.
 **Execute this command:**
 
 ```bash
-
+TODO
 ```
 
 **Output type(json):**
@@ -436,7 +455,7 @@ We showed you how to use the PAPI CLI to invoke your contract, now let's do it w
 Execute:
 
 ```bash
-
+TODO
 ```
 
 ----
@@ -450,6 +469,8 @@ Execute:
 ----
 
 ## dApp Backend - Micro Indexer
+
+**TODO**
 
 We will now create a backend to provide data for your UI. We will take a flexible approach to building a dapp
 backend, giving your working examples of various ways to supply data to your client front-end.
@@ -479,13 +500,13 @@ contract events emitted by your contract and presents them to your front-end cli
 **Run locally**
 
 ```
-
+TODO
 ```
 
 **Choose a Testnet RPC Provider**
 
 ```dotenv
-
+TODO
 ```
 
 **Start locally:**
@@ -526,7 +547,9 @@ pnpm start:dev
   }
 ```
 
-## Customizing your contract
+## Updating the Deployed Contract
+
+**TODO**
 
 ### Workflow
 
@@ -550,6 +573,8 @@ TODO
 
 ## Opinionated Front-end Client Creation
 
+**TODO**
+
 The method of UI creation is a template that is actively maintained, 500+ deployments, and full
 test suite + static analysis with app generation test. 218 GitHub stars.
 
@@ -564,22 +589,10 @@ Related
 - https://github.com/paritytech/hardhat-polkadot
 -
 
-### Reference Links
+### Additional Resources
 
-//TODO Organize
-
-ChainSpec: https://raw.githubusercontent.com/paritytech/chainspecs/refs/heads/main/westend/parachain/asset-hub-next/chainspec.json
-
-- https://github.com/paritytech/polkadot-sdk/blob/master/substrate/frame/revive/rpc/examples/westend_local_network.toml
-- https://github.com/paritytech/polkadot-sdk/tree/master/substrate/frame/revive/rpc/examples
-- https://github.com/paritytech/evm-test-suite/tree/main/eth-rpc
-- https://github.com/AcalaNetwork/Acala/tree/master/modules/evm
-- https://hub.docker.com/r/acala/eth-rpc-adapter/tags
-- https://github.com/AcalaNetwork/Acala/releases/download/2.30.0/acala_runtime_tracing_2300.compact.compressed.wasm
-- https://github.com/paritytech/hardhat-polkadot/blob/500cba0310fad38cf01cc7b11cb2e4043bd71482/packages/hardhat-polkadot-node/src/type-extensions.ts#L4
-- https://github.com/paritytech/hardhat-polkadot/blob/main/packages/hardhat-polkadot-node/src/services/eth-rpc.ts
-- https://github.com/paritytech/hardhat-polkadot/blob/main/packages/hardhat-polkadot-node/src/services/substrate-node.ts
-
+- https://github.com/polkadot-developers/hackathon-guide/tree/master
+- 
 ----
 
 ## 👀 Want to learn more?
