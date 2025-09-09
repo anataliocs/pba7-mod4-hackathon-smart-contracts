@@ -7,11 +7,10 @@ import '@nomicfoundation/hardhat-ethers'
 import '@nomicfoundation/hardhat-chai-matchers'
 import '@nomiclabs/hardhat-solhint'
 import 'chai'
-import {HardhatUserConfig} from "hardhat/config.js";
+import {HardhatUserConfig} from "hardhat/config";
 
 // Ensure PAPI treats "pending" as "latest" to avoid UnknownBlock on eth_getTransactionCount
 process.env.PAPI_ETH_PENDING_IS_LATEST = process.env.PAPI_ETH_PENDING_IS_LATEST ?? "1";
-
 
 const config: HardhatUserConfig = {
     ignition: {
@@ -27,6 +26,7 @@ const config: HardhatUserConfig = {
             }
         }
     },
+    defaultNetwork: "localNode",
     networks: {
         hardhat: {
             throwOnCallFailures: true,
@@ -36,12 +36,12 @@ const config: HardhatUserConfig = {
         },
         localNode: {
             polkavm: true,
-            url: `http://127.0.0.1:8545`,
+            url: "http://127.0.0.1:8545",
             accounts: ["0x5fb92c48bebcd6e98884f76de468fa3f6278f880713595d45af5b0000a702133"],
             docker: true,
             loggingEnabled: true,
             throwOnCallFailures: true,
-            throwOnTransactionFailures: true
+            throwOnTransactionFailures: true,
         },
         /** Polkadot Hub Testnet
          * faucet: https://faucet.polkadot.io/?parachain=1111
@@ -55,6 +55,12 @@ const config: HardhatUserConfig = {
             accounts: ["0x5fb92c48bebcd6e98884f76de468fa3f6278f880713595d45af5b0000a702133"],
             chainId: 420420422,
         },
+        kusamaHub: {
+            polkavm: true,
+            url: "https://kusama-asset-hub-eth-rpc.polkadot.io",
+            accounts: ["0x5fb92c48bebcd6e98884f76de468fa3f6278f880713595d45af5b0000a702133"],
+            chainId: 420420418,
+        },
     },
     typechain: {
         target: "ethers-v6",
@@ -63,8 +69,11 @@ const config: HardhatUserConfig = {
     mocha: {
         globals: ["hre"],
         ui: "bdd",
+
         rootHooks: {
             beforeAll: done => {
+                console.log("Running beforeAll hook");
+                done();
             }
         }
     },
@@ -72,8 +81,6 @@ const config: HardhatUserConfig = {
     gasReporter: {
         enabled: false,
     },
-
-
 };
 
 export default config;

@@ -31,7 +31,7 @@ the most popular ones:
 
 Besides **Solidity**, you can also write smart contracts in Rust using **ink!** &mdash; the go-to language for
 Rust-based smart contract development on Polkadot. Check out the [**ink! Docs**](https://use.ink/6.x) (compatible with
-PolkaVM from v6 ) to get started.
+PolkaVM from v6) to get started.
 
 ### 👨‍💻 Contract Interaction Libraries
 
@@ -45,8 +45,6 @@ Several libraries can be used to interact with smart contracts deployed on Polka
 
 - 🌐 [**Web3.js**](https://docs.polkadot.com/develop/smart-contracts/libraries/web3-js/)
 
-- 🐍 [**Web3.py**](https://docs.polkadot.com/develop/smart-contracts/libraries/web3-py/)
-
 - 🧙 [**Wagmi**](https://docs.polkadot.com/develop/smart-contracts/libraries/wagmi/)
 
 **ink!**
@@ -59,12 +57,13 @@ Here you can find some useful tutorials and resources to help you get started wi
 Polkadot:
 
 - ✍️ [**Create a Smart Contract
-  **](https://docs.polkadot.com/tutorials/smart-contracts/launch-your-first-project/create-contracts/) - a step-by-step
+  **](https://docs.polkadot.com/tutorials/smart-contracts/launch-your-first-project/create-contracts/)
+- Step-by-step
   guide to creating your first smart contract on Polkadot
 
 - ⚙️ [**Test and Deploy with Hardhat
-  **](https://docs.polkadot.com/tutorials/smart-contracts/launch-your-first-project/test-and-deploy-with-hardhat/) - a
-  guide to testing and deploying your smart contract using Hardhat
+  **](https://docs.polkadot.com/tutorials/smart-contracts/launch-your-first-project/test-and-deploy-with-hardhat/)
+- Guide to testing and deploying your smart contract using Hardhat
 
 - 🎨 [**Deploy a NFT**](https://docs.polkadot.com/tutorials/smart-contracts/deploy-nft/) - a tutorial on deploying an NFT
   smart contract on Polkadot
@@ -83,7 +82,7 @@ Polkadot:
 
 ### 🔑 How to Connect to Polkadot Hub Testnet
 
-You can use any **Ethereum-compatible wallet** wallet to connect to Polkadot Hub Testnet. Follow
+You can use any **Ethereum-compatible wallet** to connect to Polkadot Hub Testnet. Follow
 the [Connect your Wallet](https://docs.polkadot.com/develop/smart-contracts/connect-to-polkadot/) guide to connect using
 MetaMask. We also recommend using [Talisman](https://talisman.xyz/), which is built for both Polkadot and Ethereum.
 
@@ -103,16 +102,17 @@ Need **testnet tokens**? Get some from the [**Testnet Faucet**](https://faucet.p
 
 ### 🏆 Starter Templates
 
-Jumpstart your **smart contract dApp** with these templates:
+JumpStart your **smart contract dApp** with these templates:
 
 - [**create-polkadot-dapp**](https://www.npmjs.com/package/create-polkadot-dapp?activeTab=readme) - a scaffolding tool
-  to generate project boilerplates. Explore the `react-solidity` template located in the `templates` folder which comes
+  to generate project boilerplate. Explore the `react-solidity` template located in the `templates` folder which comes
   pre-configured with **React, Tailwind CSS, and Ethers.js** for frontend interaction with your smart contracts
 
-- [**hardhat-polkadot-example**](https://github.com/UtkarshBhardwaj007/hardhat-polkadot-example) - a demo for how to use
-  Hardhat with Polkadot.
+- [**hardhat-polkadot-example**](https://github.com/UtkarshBhardwaj007/hardhat-polkadot-example)
+- Demo for how to use
+  Hardhat with Polkadot
 
-### Vibe coding with AI: LLM configuration helper
+### LLM Configuration Helper
 
 - If using AI tools like LLMs, remember to direct them to use the
   most [up-to-date documentation](https://docs.polkadot.com/).

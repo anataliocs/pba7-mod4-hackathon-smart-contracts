@@ -1,7 +1,9 @@
 import env, {ethers, network} from "hardhat"; // chai.use(solidity)
 import {expect} from "chai";
-import {ERC20} from "../typechain-types/test/ERC20.js";
+import {ERC20} from "../typechain-types";
 import {SignerWithAddress} from "@nomicfoundation/hardhat-ethers/signers";
+import "@nomicfoundation/hardhat-ethers"
+import hre from "hardhat"
 
 const expandTo18Decimals = (n: number): bigint =>
     env.ethers.getBigInt(n) * env.ethers.getBigInt('1000000000000000000');

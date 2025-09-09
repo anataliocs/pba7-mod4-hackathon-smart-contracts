@@ -2,7 +2,7 @@
 <div align="center">
 <img width="625" height="212" alt="Polkadot Blockchain Academy Banner Img" src="https://github.com/user-attachments/assets/8ad342ba-b189-4da9-be56-03a92dcb86b9" />
 
-<h1>Module 4 Sept 9 Hackathon Entry - Smart Contracts ✨</h1>
+<h1>Module 4 Sept 9 Hackathon Entry—Smart Contracts ✨</h1>
 
 <h3>PBA Cohort 7 Bali</h3>
 <p><strong>Student: </strong> Chris Anatalio</p>
@@ -37,7 +37,7 @@
 
 # 📈 Uniswap V2 on PolkVM - Minimal Viable Dex on Polkadot Hub Smart Contract
 
-_Uniswap V2 contracts on Polkadot using PolkVM._
+_Uniswap V2 contracts on Polkadot using PolkVM, typechain, Hardhat, Solidity and the @parity/hardhat-polkadot._
 
 ### Quickstart
 
@@ -54,6 +54,7 @@ cd uniswap
 ```shell
 pnpm deps
 ```
+
 Reset and reinstall using `pnpm reset`
 
 **Generate typechain definitions:**
@@ -65,7 +66,7 @@ pnpm gen
 **Compile contract:**
 
 ```bash
-pnpm hardhat compile --typecheck
+pnpm compile
 ```
 
 **Run local node**
@@ -83,6 +84,7 @@ pnpm test
 
 **Set deployment account**
 _Local node account_
+
 ```bash
 pnpm hardhat vars set PRIVATE_KEY "0x5fb92c48bebcd6e98884f76de468fa3f6278f880713595d45af5b0000a702133"
 ```
@@ -92,6 +94,16 @@ pnpm hardhat vars set PRIVATE_KEY "0x5fb92c48bebcd6e98884f76de468fa3f6278f880713
 ```bash
 
 ```
+
+```terminaloutput
+Testnet details:
+* Network name: Passet Hub
+* Chain ID: 420420421
+* RPC URL: https://testnet-passet-hub-eth-rpc.polkadot.io
+* Block Explorer URL: https://blockscout-passet-hub.parity-testnet.parity.io/
+```
+
+[**Testnet Faucet**](https://faucet.polkadot.io/?parachain=1111)
 
 ----
 
